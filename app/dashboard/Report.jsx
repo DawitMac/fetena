@@ -13,7 +13,7 @@ import Special from "../exam/[...subject]/Special";
       value: "bargraph",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-2xl font-bold  bg-white">
-          <p>Dagi's Bar Graph</p>
+          <p>Dagi&apos;s Bar Graph</p>
          <BarGraph info={result} />
         </div>
       ),
@@ -23,7 +23,7 @@ import Special from "../exam/[...subject]/Special";
       value: "linegraph",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-2xl font-bold  bg-white">
-          <p>Dagi's Line Graph</p>
+          <p>Dagi&apos;s Line Graph</p>
           <LineGraph info={result} />
         </div>
       ),
@@ -33,7 +33,7 @@ import Special from "../exam/[...subject]/Special";
       value: "radar",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-2xl font-bold  bg-white">
-          <p>Dagi's Radar Graph</p>
+          <p>Dagi&apos;s Radar Graph</p>
           <RadarGraph info={result} />
         </div>
       ),
@@ -51,14 +51,4 @@ import Special from "../exam/[...subject]/Special";
   );
 }
 export default Report
-// const DummyContent = () => {
-//   return (
-//     <Image
-//       src="/linear.webp"
-//       alt="dummy image"
-//       width="1000"
-//       height="1000"
-//       className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-//     />
-//   );
-// };
+

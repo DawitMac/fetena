@@ -46,7 +46,7 @@ export const TextTypingEffectWithTexts = () => {
 
   const timeToTypeText = texts[textIndex].split(" ").length * TIME_PER_LETTER;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const circleTimeout = setTimeout(() => {
       setFadeCircle(false);
     }, timeToTypeText + 1000);
