@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { signIn } from 'next-auth/react'
 
-
+const apiUrl = process.env.NEXTAUTH_URL
 export async function handleSubmit(code , setErr){
   
  
@@ -21,7 +21,7 @@ export async function handleSubmit(code , setErr){
 export async function getData() {
     
     try {
-      const {data} = await axios.get("http://localhost:3000/api/getexam") 
+      const {data} = await axios.get(`${apiUrl}/api/getexam`) 
       return data
     } catch (error) {
       console.log(error)
@@ -39,7 +39,7 @@ export async function getData() {
     export async function getResult() {
     
       try {
-        const {data} = await axios.get("http://localhost:3000/api/result") 
+        const {data} = await axios.get(`${apiUrl}/api/result`) 
         return data
       } catch (error) {
         console.log(error)
@@ -51,7 +51,7 @@ export async function getData() {
 
    export async function getExam( name , year ) {
  
-      const {data} = await axios.post("http://localhost:3000/api/getexam" , { name , year}) 
+      const {data} = await axios.post(`${apiUrl}/api/getexam` , { name , year}) 
        // The return value is *not* serialized
       // You can return Date, Map, Set, etc.
     
@@ -63,6 +63,6 @@ export async function getData() {
       return data
     }
     export async function handleResult( id , res ){
-      const {data} = await axios.post("http://localhost:3000/api/result" , { id , res}) 
+      const {data} = await axios.post(`${apiUrl}/api/result` , { id , res}) 
         console.log(data)
       }
