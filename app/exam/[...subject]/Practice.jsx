@@ -140,9 +140,10 @@ const Practice = ({examination  , handleResult }) => {
                    examination?.data.exam.map((ex , index)=>(
                     <div onClick={()=>{ 
                      
-                      handleScrollToTop()
-                      setMin(index)
+                      setIsAnswered(false)
+                      setMin(i)
                       setShowMore(!showMore)
+                      handleScrollToTop()
                     
                       }} key={index} className={`flex items-center justify-center w-12 h-12 border-2 p-1 cursor-pointer hover:scale-105 duration-300 hover:bg-white/50 hover:text-black/50  ${(ex.selectedChoice && !isAnswered) ? 'bg-slate-400' : (ex.selectedChoice === ex.correctAnswer && isAnswered) ?  'bg-green-500/100' : (ex.selectedChoice === ex.selectedChoice && isAnswered) && 'bg-red-500/100'} `}>
                       {index + 1}

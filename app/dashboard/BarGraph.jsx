@@ -20,34 +20,6 @@ ChartJS.register(
   Legend
 );
 
-// const info = [
-//   {
-//     name : "SAT" ,
-//     year : 2010 ,
-//     result : 32
-//   },
-//   {
-//     name : "SAT" ,
-//     year : 2015 ,
-//     result : 26
-//   },
-//   {
-//     name : "english" ,
-//     year : 2012 ,
-//     result : 54
-//   },
-//   {
-//     name : "SAT" ,
-//     year : 2012 ,
-//     result : 78
-//   },
-//   {
-//     name : "english" ,
-//     year : 2014 ,
-//     result : 60
-//   },
-// ]
-
 export const options = {
   responsive: true,
   plugins: {
@@ -83,10 +55,8 @@ let englishFormat = [
 ]
 
 const BarGraph = ({info}) => {
-  const [ SAT , setSAT ] = useState([])
   const [ satData , setSatData ] = useState([])
   const [ englishData , setEnglishData ] = useState([])
-const [ english , setEnglish ] = useState([])
 
 
  const data = {
@@ -128,10 +98,9 @@ for(let i = 0 ; i < eng?.length ; i++){
 }
 setEnglishData(englishFormat.map(value => value.result))
 
-  //const sortedNumbers = numbers.sort((a, b) => a - b);
 },[])
   return (
-    <div className='md:w-[80dvw] w-[95dvw] md:h-[70dvh] bg-white'>
+    <div className='w-[80dvw] md:h-[70dvh] h-[90dvh] bg-white mt-10 sm:mt-0'>
         <Bar options={options} data={data} />
     </div>
   )

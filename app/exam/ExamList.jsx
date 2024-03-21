@@ -26,7 +26,7 @@ const ExamList = ({examination}) => {
 if(!data){
   return (
     <div className='flex flex-col items-center justify-center gap-20'>
-    <h1 className='text-3xl font-mono my-12  sm:pl-6 items-center '>Challenge Yourself , Elevate Your Intelligence</h1>
+    <h1 className='text-3xl font-mono my-12 pl-6 items-center text-center sm:text-start'>Challenge Yourself , Elevate Your Intelligence</h1>
    
 <div width={300} height={200} className='flex lg:flex-row flex-col items-center justify-around lg:gap-4 gap-10 '  >
     <div className=' w-72 h-10  bg-gray-100/90 animate-pulse'></div>
@@ -45,7 +45,7 @@ if(!data){
      
      
   <div className='flex flex-col items-center justify-center gap-20'>
-  <h1 className='lg:text-3xl sm:text-2xl text-xl font-bold font-mono my-12  sm:pl-6 items-center flex-wrap'>Challenge Yourself , Elevate Your Intelligence</h1>
+  <h1 className='md:text-3xl text-2xl  font-bold font-mono my-12  pl-6 items-center text-center flex-wrap'>Challenge Yourself , Elevate Your Intelligence</h1>
   <div className='flex lg:flex-row flex-col items-center justify-around lg:gap-4 gap-10'>
    <div className="w-72">
       <Select label="Select Field" color="green">

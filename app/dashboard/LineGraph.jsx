@@ -104,7 +104,7 @@ const LineGraph = ({info}) => {
   };
 
   return (
-    <div className='md:w-[80dvw] w-[95dvw] md:h-[70dvh]'>
+    <div className='w-[80dvw] md:h-[70dvh] h-[90dvh] bg-white mt-10 sm:mt-0'>
     <Line options={options} data={data}   />
 </div>
   )

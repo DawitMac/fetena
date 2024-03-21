@@ -43,7 +43,7 @@ import Special from "../exam/[...subject]/Special";
 
   return (
     <>
-    <div className="h-[60dvh] md:h-[40rem] [perspective:1000px] relative  flex flex-col max-w-5xl mx-auto w-full  md:items-start md:justify-start items-center justify-center my-4 px-6">
+    <div className="h-[90dvh] md:h-[40rem] [perspective:1000px] relative  flex flex-col w-[95dvw] mx-auto w-full  md:items-start md:justify-start items-center justify-center my-4 px-6">
       <Tabs tabs={tabs} />
     </div>
     <Special />

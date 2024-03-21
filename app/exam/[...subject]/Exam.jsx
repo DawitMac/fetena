@@ -104,14 +104,14 @@ const Exam = ({examination  }) => {
          
            
                 
-                   examination?.data.exam.map((ex , index)=>(
+                   examination?.data.exam.map((item , i)=>(
                     <div onClick={()=>{ 
                      
                       handleScrollToTop()
-                      setMin(index)
+                      setMin(i)
                       setShowMore(!showMore)
                     
-                      }} key={index} className={`flex items-center justify-center w-12 h-12 border-2 p-1 cursor-pointer hover:scale-105 duration-300 hover:bg-white/50 hover:text-black/50  ${(ex.selectedChoice && !isAnswered) ? 'bg-slate-400' : (ex.selectedChoice === ex.correctAnswer && isAnswered) ?  'bg-green-500/100' : (ex.selectedChoice === ex.selectedChoice && isAnswered) && 'bg-red-500/100'} `}>
+                      }} key={index} className={`flex items-center justify-center w-12 h-12 border-2 p-1 cursor-pointer hover:scale-105 duration-300 hover:bg-white/50 hover:text-black/50 mt-8  ${(examResult[i] && !isAnswered) ? 'bg-gray-400' : (examResult[i] == item.correctAnswer && isAnswered) ?  'bg-green-500/100' :(isAnswered) && 'bg-red-500/100'}`}>
                       {index + 1}
                     </div>
                   ))
